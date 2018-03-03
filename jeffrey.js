@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var rolld6 = Math.floor(Math.random() * 6) + 1;
+var rolld6 = Math.floor((Math.random() * 6) + 1);
 
 client.on('ready', () => {console.log('Jeffrey is ready to play!');});
 
@@ -12,7 +12,6 @@ client.on('message', message => {
   else if(message.content === '/help'){message.reply('Go to the Help Channel ya doofus!');}
   
   else if(message.content === '/roll'){
-    var roll6 = Math.floor(Math.random() * 6) + 1;
          if(roll6 = 1){message.reply('You rolled a 1!');}
     else if(roll6 = 2){message.reply('You rolled a 2!');}
     else if(roll6 = 3){message.reply('You rolled a 3!');}
