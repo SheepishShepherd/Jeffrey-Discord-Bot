@@ -3,6 +3,6 @@
   "description": "Jeffrey Discord Bot",
   "version": "0.0.0",
   "main": "jeffrey.js",
-  "scripts": {"start": "node jeffrey.js"}.
+  "scripts": {"start": "node jeffrey.js"},
   "dependencies": {"discord.js": "11.1.0", "request": "2.81.0"}
 }
