@@ -17,8 +17,8 @@ client.on('message', message => {
     if(randomNumber = 3){files: [/Images/GameProps/D6/d6_3.jpg]}
     if(randomNumber = 4){files: [/Images/GameProps/D6/d6_4.jpg]}
     if(randomNumber = 5){files: [/Images/GameProps/D6/d6_5.jpg]}
-    if(randomNumber = 6){files: [/Images/GameProps/D6/d6_6.jpg]};
-    return randomNumber;}
+    if(randomNumber = 6){files: [/Images/GameProps/D6/d6_6.jpg]}
+    else {return randomNumber;}}
   
   else {message.reply("That's not a command, silly!").then(msg => {msg.delete(10000)})
     .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/);}
