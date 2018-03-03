@@ -17,11 +17,8 @@ client.on('message', message => {
     else if(rolld6 == 3){message.reply('has rolled a 3!');}
     else if(rolld6 == 4){message.reply('has rolled a 4!');}
     else if(rolld6 == 5){message.reply('has rolled a 5!');}
-    else if(rolld6 == 6){message.reply('has rolled a 6!');}
-  }
-  
-  else if(message.content === '/pet'){message.channel.send("*gasp*", {files: "Jeffrey-Discord-Bot/Images/Jeffrey/cuteJeffrey.jpg"});}
-  
+    else if(rolld6 == 6){message.reply('has rolled a 6!');}}
+    
   else {message.reply("That's not a command, silly!").then(msg => {msg.delete(10000)})
     .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/);}
 });
