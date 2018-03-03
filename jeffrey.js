@@ -8,7 +8,7 @@ client.on('message', message => {
   
   else if(message.content === '/ping'){message.reply('PONG! :ping_pong:');}
   
-  else if(message.content === '/help'){message.reply('Go to the Help Channel ya doofus!');}
+  else if(message.content === '/help'){message.send('Go to the Help Channel ya doofus!');}
   
   else if(message.content === '/roll'){
     var rolld6 = Math.floor((Math.random() * 6) + 1);
