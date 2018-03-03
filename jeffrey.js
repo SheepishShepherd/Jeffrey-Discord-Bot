@@ -11,14 +11,6 @@ client.on('message', message => {
   
   else if(message.content === '/help'){message.reply('Go to the Help Channel ya doofus!');}
   
-  else if(message.content === '/roll d6'){
-    if(rolld6 = 1){files: [/Images/GameProps/D6/d6_1.jpg]}
-    if(rolld6 = 2){files: [/Images/GameProps/D6/d6_2.jpg]}
-    if(rolld6 = 3){files: [/Images/GameProps/D6/d6_3.jpg]}
-    if(rolld6 = 4){files: [/Images/GameProps/D6/d6_4.jpg]}
-    if(rolld6 = 5){files: [/Images/GameProps/D6/d6_5.jpg]}
-    if(rolld6 = 6){files: [/Images/GameProps/D6/d6_6.jpg]};}
-  
   else {message.reply("That's not a command, silly!").then(msg => {msg.delete(10000)})
     .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/);}
 });
