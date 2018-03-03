@@ -20,7 +20,7 @@ client.on('message', message => {
     else if(rolld6 == 6){message.reply('has rolled a 6!');}
   }
   
-  else if(message.content === '/pet'){message.channel.send({files: ["/images/jeffrey/cute.jpg"]});}
+  else if(message.content === '/pet'){message.channel.send({files: ["/Images/Jeffrey/cuteJeffrey.jpg"]});}
   
   else {message.reply("That's not a command, silly!").then(msg => {msg.delete(10000)})
     .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/);}
