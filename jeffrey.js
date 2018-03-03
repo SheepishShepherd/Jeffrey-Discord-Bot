@@ -11,6 +11,16 @@ client.on('message', message => {
   
   else if(message.content === '/help'){message.reply('Go to the Help Channel ya doofus!');}
   
+  else if(message.content === '/roll'){
+    var roll6 = Math.floor(Math.random() * 6) + 1;
+         if(roll6 = 1){message.reply('You rolled a 1!');}
+    else if(roll6 = 2){message.reply('You rolled a 2!');}
+    else if(roll6 = 3){message.reply('You rolled a 3!');}
+    else if(roll6 = 4){message.reply('You rolled a 4!');}
+    else if(roll6 = 5){message.reply('You rolled a 5!');}
+    else if(roll6 = 6){message.reply('You rolled a 6!');}
+  }
+  
   else {message.reply("That's not a command, silly!").then(msg => {msg.delete(10000)})
     .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/);}
 });
