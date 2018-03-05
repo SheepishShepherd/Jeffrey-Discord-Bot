@@ -11,7 +11,7 @@ client.on('message', message => {
   else if(message.content === '/help'){message.channel.send('If you need help with commands, go to #jeffrey-commands');}
   
   else if(message.content === '/roll'){
-    message.delete(200);
+    message.delete(50);
     var rolld6 = Math.floor((Math.random() * 6) + 1);
          if(rolld6 == 1){message.reply('has rolled a 1!');}
     else if(rolld6 == 2){message.reply('has rolled a 2!');}
