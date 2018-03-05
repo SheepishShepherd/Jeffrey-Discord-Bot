@@ -3,9 +3,10 @@ const client = new Discord.Client();
 
 client.on('ready', () => {console.log('Jeffrey is ready to play!');});
 
-client.on('guildMemberAdd', member => {
-  var sheepRole = member.guild.roles.find('name', 'Sheep');
-  member.addRole(role);});
+// client.on('guildMemberAdd', member => {
+//   var sheepRole = member.guild.roles.find('name', 'Sheep');
+//   member.addRole(role);}
+// );
 
 client.on('message', message => {
   if(message.content.charAt(0) !== '/'){return;}
