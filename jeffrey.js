@@ -2,6 +2,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "/";
 
+const cmdList = bot.channels.get("417004652144361472");
+
 client.on('ready', () => {console.log('Jeffrey is ready to play!');});
 
 // client.on('guildMemberAdd', member => {
@@ -14,7 +16,7 @@ client.on('message', message => {
   
   if(message.content.startsWith(prefix + "ping")){message.reply('PONG! :ping_pong:');}  
     else
-  if(message.content.startsWith(prefix + "help")){message.channel.send('If you need help with commands, go to #command-list ');}
+  if(message.content.startsWith(prefix + "help")){message.channel.send('If you need help with commands, go to ' + cmdList);}
     else
   if(message.content.startsWith(prefix + "roll")){
       message.delete(1);
