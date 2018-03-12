@@ -2,8 +2,6 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "/";
 
-const cmdList = bot.channels.get("417004652144361472");
-
 client.on('ready', () => {console.log('Jeffrey is ready to play!');});
 
 // client.on('guildMemberAdd', member => {
