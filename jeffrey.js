@@ -16,7 +16,7 @@ client.on('message', message => {
   
   if(message.content.startsWith(prefix + "ping")){message.reply('PONG! :ping_pong:');}  
     else
-  if(message.content.startsWith(prefix + "help")){message.channel.send('If you need help with commands, go to ' + cmdList);}
+  if(message.content.startsWith(prefix + "help")){message.channel.send('If you need help with commands, go to #command-list');}
     else
   if(message.content.startsWith(prefix + "roll")){
       message.delete(1);
