@@ -25,16 +25,8 @@
         
         case "roll":
           if(!args[1]){
-            message.reply("rolled a 6-sided die!");
-            if(args[1] = "6"){
-              var rolld6 = Math.floor((Math.random() * 6) + 1);
-              if(rolld6 == 1){message.reply('has rolled a 1!', {file: 'https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/GameProps/D6/d6_1.png'});}
-                else if(rolld6 == 2){message.reply('has rolled a 2!', {file: 'https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/GameProps/D6/d6_2.png'});}
-                else if(rolld6 == 3){message.reply('has rolled a 3!', {file: 'https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/GameProps/D6/d6_3.png'});}
-                else if(rolld6 == 4){message.reply('has rolled a 4!', {file: 'https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/GameProps/D6/d6_4.png'};}
-                else if(rolld6 == 5){message.reply('has rolled a 5!', {file: 'https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/GameProps/D6/d6_5.png'});}
-                else if(rolld6 == 6){message.reply('has rolled a 6!', {file: 'https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/GameProps/D6/d6_6.png'});}}
-            }
+            if(args[1] = "6"){message.channel.sendMessage("You rolled a six-sided die!");}
+            else if(args[1] = "20"){message.channel.sendMessage("You rolled a twenty-sided die!");}
             else{message.channel.sendMessage("That's not a valid number!");}
           }
           else if(args[1]){message.reply("rolled a n-sided die!");}
