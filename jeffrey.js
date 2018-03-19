@@ -2,6 +2,9 @@
   const bot = new Discord.Client();
   const prefix = "/";
 
+  var d6roll = Math.floor((Math.random() * 6) + 1);
+  var d20roll = Math.floor((Math.random() * 20) + 1);
+
   bot.on('ready', () => {console.log('Jeffrey is ready to play!');});
 
   bot.on('message', message => {
@@ -24,7 +27,6 @@
         
         case "roll":
           if(!args[1]){
-            var d6roll = Math.floor((Math.random() * 6) + 1);
             if(d6roll == 1){message.reply("rolled a 1!");}
             else if(d6roll == 2){message.reply("rolled a 2!");}
             else if(d6roll == 3){message.reply("rolled a 3!");}
@@ -35,8 +37,38 @@
           }
 
           else if(args[1]){
-            if(args[1] == "6"){message.channel.sendMessage("You rolled a six-sided die!");}
-            else if(args[1] == "20"){message.channel.sendMessage("You rolled a twenty-sided die!");}
+            if(args[1] == "6"){
+              if(d6roll == 1){message.reply("rolled a 1!");}
+              else if(d6roll == 2){message.reply("rolled a 2!");}
+              else if(d6roll == 3){message.reply("rolled a 3!");}
+              else if(d6roll == 4){message.reply("rolled a 4!");}
+              else if(d6roll == 5){message.reply("rolled a 5!");}
+              else if(d6roll == 6){message.reply("rolled a 6!");}
+              else {message.channel.reply("rolled a six-sided die!");}
+            }
+            else if(args[1] == "20"){
+              if(d20roll == 1){message.reply("rolled a 1!");}
+              else if(d20roll == 2){message.reply("rolled a 2!");}
+              else if(d20roll == 3){message.reply("rolled a 3!");}
+              else if(d20roll == 4){message.reply("rolled a 4!");}
+              else if(d20roll == 5){message.reply("rolled a 5!");}
+              else if(d20roll == 6){message.reply("rolled a 6!");}
+              else if(d20roll == 7){message.reply("rolled a 7!");}
+              else if(d20roll == 8){message.reply("rolled a 8!");}
+              else if(d20roll == 9){message.reply("rolled a 9!");}
+              else if(d20roll == 10){message.reply("rolled a 10!");}
+              else if(d20roll == 11){message.reply("rolled a 11!");}
+              else if(d20roll == 12){message.reply("rolled a 12!");}
+              else if(d20roll == 13){message.reply("rolled a 13!");}
+              else if(d20roll == 14){message.reply("rolled a 14!");}
+              else if(d20roll == 15){message.reply("rolled a 15!");}
+              else if(d20roll == 16){message.reply("rolled a 16!");}
+              else if(d20roll == 17){message.reply("rolled a 17!");}
+              else if(d20roll == 18){message.reply("rolled a 18!");}
+              else if(d20roll == 19){message.reply("rolled a 19!");}
+              else if(d20roll == 20){message.reply("rolled a 20!");}
+              else {message.channel.reply("rolled a twenty-sided die!");}
+            }
             else{message.channel.sendMessage("That's not a valid number!");}}
         
           else{return;}
