@@ -1,6 +1,6 @@
   const Discord = require('discord.js');
   const bot = new Discord.Client();
-  const prefix = "/";
+  const prefix = "!";
 
   var d6roll = Math.floor((Math.random() * 6) + 1);
   var d20roll = Math.floor((Math.random() * 20) + 1);
