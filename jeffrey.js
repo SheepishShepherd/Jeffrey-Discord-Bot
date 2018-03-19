@@ -3,12 +3,12 @@
   const prefix = "/";
 
 //Files for the dice images. d stands for dice and f stands for face.
-  var d6f1 = "{file: 'https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/GameProps/D6/d6_1.png'"};
-  var d6f2 = "{file: 'https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/GameProps/D6/d6_2.png'"};
-  var d6f3 = "{file: 'https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/GameProps/D6/d6_3.png'"};
-  var d6f4 = "{file: 'https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/GameProps/D6/d6_4.png'"};
-  var d6f5 = "{file: 'https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/GameProps/D6/d6_5.png'"};
-  var d6f6 = "{file: 'https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/GameProps/D6/d6_6.png'"};
+  var d6f1 = "{file: 'https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/GameProps/D6/d6_1.png'}";
+  var d6f2 = "{file: 'https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/GameProps/D6/d6_2.png'}";
+  var d6f3 = "{file: 'https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/GameProps/D6/d6_3.png'}";
+  var d6f4 = "{file: 'https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/GameProps/D6/d6_4.png'}";
+  var d6f5 = "{file: 'https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/GameProps/D6/d6_5.png'}";
+  var d6f6 = "{file: 'https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/GameProps/D6/d6_6.png'}";
 
   client.on('ready', () => {console.log('Jeffrey is ready to play!');});
 
