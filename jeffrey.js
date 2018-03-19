@@ -24,7 +24,9 @@
 //Refers the help channel for a command list
         
         case "roll":
-          message.channel.sendMessage("What dice do you want to roll?");
+          if(!args[1]){message.reply(", rolled a 6-sided die!");}
+          if(args[1]){message.reply(", rolled a n-sided die!");}
+          else{message.channel.sendMessage("I'm a little confused...");}
           break;
         
         default:
