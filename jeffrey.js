@@ -24,12 +24,14 @@
 //Refers the help channel for a command list
         
         case "roll":
-          if(!args[1]){
+          if(!args[1]){message.channel.sendMessage("You rolled a six-sided die!");}
+
+          else if(args[1]){
             if(args[1] = "6"){message.channel.sendMessage("You rolled a six-sided die!");}
             else if(args[1] = "20"){message.channel.sendMessage("You rolled a twenty-sided die!");}
             else{message.channel.sendMessage("That's not a valid number!");}
           }
-          else if(args[1]){message.reply("rolled a n-sided die!");}
+        
           else{message.channel.sendMessage("I'm a little confused...");}
           break;
         
