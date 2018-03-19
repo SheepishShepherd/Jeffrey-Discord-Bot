@@ -22,6 +22,13 @@
           break;
 //Refers the help channel for a command list
         
+        case "flip":
+          var roll = Math.floor((Math.random() * 2) + 1);
+          if(roll == 1){message.reply("got heads!");}
+          else if(roll == 2){message.reply("got tails!");}
+          else{message.reply("flipped a coin!");}
+          break;
+        
         case "roll":
           if(!args[1]){
             var roll = Math.floor((Math.random() * 6) + 1);
@@ -31,7 +38,7 @@
             else if(roll == 4){message.reply("rolled a 4!");}
             else if(roll == 5){message.reply("rolled a 5!");}
             else if(roll == 6){message.reply("rolled a 6!");}
-            else {message.channel.reply("rolled a six-sided die!");}
+            else {message.reply("rolled a six-sided die!");}
           }
 
           else if(args[1]){
@@ -43,7 +50,7 @@
               else if(d6roll == 4){message.reply("rolled a 4!");}
               else if(d6roll == 5){message.reply("rolled a 5!");}
               else if(d6roll == 6){message.reply("rolled a 6!");}
-              else {message.channel.reply("rolled a six-sided die!");}
+              else {message.reply("rolled a six-sided die!");}
             }
             else if(args[1] == "20"){
               var d20roll = Math.floor((Math.random() * 20) + 1);
@@ -67,13 +74,13 @@
               else if(d20roll == 18){message.reply("rolled a 18!");}
               else if(d20roll == 19){message.reply("rolled a 19!");}
               else if(d20roll == 20){message.reply("rolled a 20!");}
-              else {message.channel.reply("rolled a twenty-sided die!");}
+              else {message.reply("rolled a twenty-sided die!");}
             }
             else{message.channel.sendMessage("That's not a valid number!");}}
         
           else{return;}
           break;
-//Rolls a die(dice) based on inputs of the user.
+//Rolls a die based on inputs of the user.
         
         default:
           message.channel.sendMessage("That's not a command, silly!").then(msg => {msg.delete(10000)}).catch();
