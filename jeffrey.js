@@ -4,7 +4,7 @@
 
   client.on('ready', () => {console.log('Jeffrey is ready to play!');});
 
-  client.on('message', function(message) {
+  client.on('message', message => {
     if (!message.content.startsWith(prefix)) return;
     else{message.reply('Oh hi!')}
   }
