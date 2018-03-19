@@ -6,7 +6,7 @@
 
   bot.on('guildMemberAdd', member => {
     message.guild.channels.find("name", "welcome").sendMessage(member.toString() + " has entered the pasture!");
-    member.addRole(member.guild.roles.fin("name", "Sheep"));
+    member.addRole(member.guild.roles.find("name", "Sheep"));
   });
 //Gives new users the "Sheep" role and gives a welcome message in the "welcome" channel.
 
