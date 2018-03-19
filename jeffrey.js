@@ -16,12 +16,7 @@
         message.reply('PONG! :ping_pong:');
         break;
 //Replies "Pong!" if the user uses /ping
-        
-        case "help":
-        message.channel.sendMessage('If you need help with commands, go to #command-list');
-        break;
-//Refers the help channel for a command list
-        
+
         default:
         message.channel.sendMessage("That's not a command, silly!");
 //If the user tries to run a command that does not exist, the bot will state so
