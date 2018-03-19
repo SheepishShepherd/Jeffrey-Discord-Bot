@@ -4,7 +4,7 @@
 
   bot.on('ready', () => {console.log('Jeffrey is ready to play!');});
 
-  bot.on('guildMemberAdd', member => {
+  bot.on('guildMemberAdd', (member) => {
     let sheepRole = message.guild.roles.get("360170519535943692");
     member.addRole(sheepRole); 
   });
