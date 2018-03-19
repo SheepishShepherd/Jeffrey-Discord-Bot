@@ -8,8 +8,8 @@
     if(!message.content.startsWith(prefix)) return;
 //If the message does not start with the set prefix, the bot will ignore the message.
      if(message.content.startsWith(prefix + "ping"){message.reply("PONG!");}
-     else{sendMessage("That's not a command!");}) 
-  }
+     else{sendMessage("That's not a command!");}
+  });
 
 
 
