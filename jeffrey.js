@@ -5,7 +5,7 @@
   client.on('ready', () => {console.log('Jeffrey is ready to play!');});
 
   client.on('message', function(message) {
-    if (!message.content.startsWith(prefix) || message.author.bot) return;
+    if (!message.content.startsWith(prefix) || message.author.equals(client.user)) return;
 //If the message does not start with the set prefix, the bot will ignore the message.
     
     var args = message.content.substring(prefix.length).split(" ");
