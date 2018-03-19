@@ -12,10 +12,13 @@
     
     switch(args[0].toLowerCase()) {
     
-        case "ping";
+        case "ping":
         message.reply('PONG! :ping_pong:');
         break;
         //Replies "Pong!" if the user uses /ping
+        
+        default:
+        message.channel.sendMessage("That's not a command, silly!");
     }
 
   });
