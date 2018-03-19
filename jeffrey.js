@@ -2,9 +2,6 @@
   const bot = new Discord.Client();
   const prefix = "!";
 
-  var d6roll = Math.floor((Math.random() * 6) + 1);
-  var d20roll = Math.floor((Math.random() * 20) + 1);
-
   bot.on('ready', () => {console.log('Jeffrey is ready to play!');});
 
   bot.on('message', message => {
@@ -27,6 +24,7 @@
         
         case "roll":
           if(!args[1]){
+            var d6roll = Math.floor((Math.random() * 6) + 1);
             if(d6roll == 1){message.reply("rolled a 1!");}
             else if(d6roll == 2){message.reply("rolled a 2!");}
             else if(d6roll == 3){message.reply("rolled a 3!");}
@@ -38,6 +36,7 @@
 
           else if(args[1]){
             if(args[1] == "6"){
+              var d6roll = Math.floor((Math.random() * 6) + 1);
               if(d6roll == 1){message.reply("rolled a 1!");}
               else if(d6roll == 2){message.reply("rolled a 2!");}
               else if(d6roll == 3){message.reply("rolled a 3!");}
@@ -47,6 +46,7 @@
               else {message.channel.reply("rolled a six-sided die!");}
             }
             else if(args[1] == "20"){
+              var d20roll = Math.floor((Math.random() * 20) + 1);
               if(d20roll == 1){message.reply("rolled a 1!");}
               else if(d20roll == 2){message.reply("rolled a 2!");}
               else if(d20roll == 3){message.reply("rolled a 3!");}
