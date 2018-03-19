@@ -31,12 +31,12 @@
           else if(rolld6 == 4){message.reply('has rolled a 4!', {file: 'https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/GameProps/D6/d6_4.png'};}
           else if(rolld6 == 5){message.reply('has rolled a 5!', {file: 'https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/GameProps/D6/d6_5.png'});}
           else if(rolld6 == 6){message.reply('has rolled a 6!', {file: 'https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/GameProps/D6/d6_6.png'});}}
+        else{message.channel.sendMessage('You need a proper dice number!');}
           break;
 //User rolls a die
         
         default:
         message.channel.sendMessage("That's not a command, silly!");
-        break;
 //If the user tries to run a command that does not exist, the bot will state so
     }
 
