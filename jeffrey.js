@@ -36,6 +36,7 @@
         
         default:
         message.channel.sendMessage("That's not a command, silly!");
+        break;
 //If the user tries to run a command that does not exist, the bot will state so
     }
 
