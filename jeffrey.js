@@ -28,6 +28,7 @@
           else if(roll == 2){message.reply("got tails!");}
           else{message.reply("flipped a coin!");}
           break;
+//Flips a coin that lands on either heads or tails
         
         case "roll":
           if(!args[1]){
@@ -80,7 +81,7 @@
         
           else{return;}
           break;
-//Rolls a die based on inputs of the user.
+//Rolls a die based on inputs of the user
         
         default:
           message.channel.sendMessage("That's not a command, silly!").then(msg => {msg.delete(10000)}).catch();
