@@ -4,6 +4,12 @@
 
   bot.on('ready', () => {console.log('Jeffrey is ready to play!');});
 
+  bot.on('guildMemberAdd', member => {
+    message.guild.channels.find("name", "welcome").sendMessage(member.toString() + " has entered the pasture!");
+    member.addRole(member.guild.roles.fin("name", "Sheep"));
+  });
+//Gives new users the "Sheep" role and gives a welcome message in the "welcome" channel.
+
   bot.on('message', message => {
     if(!message.content.startsWith(prefix)) return;
     if(message.author.equals(bot.user)) return;
