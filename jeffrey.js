@@ -24,13 +24,13 @@
         
         case "roll":
           if(!args[1]){
-            var d6roll = Math.floor((Math.random() * 6) + 1);
-            if(d6roll == 1){message.reply("rolled a 1!");}
-            else if(d6roll == 2){message.reply("rolled a 2!");}
-            else if(d6roll == 3){message.reply("rolled a 3!");}
-            else if(d6roll == 4){message.reply("rolled a 4!");}
-            else if(d6roll == 5){message.reply("rolled a 5!");}
-            else if(d6roll == 6){message.reply("rolled a 6!");}
+            var roll = Math.floor((Math.random() * 6) + 1);
+            if(roll == 1){message.reply("rolled a 1!");}
+            else if(roll == 2){message.reply("rolled a 2!");}
+            else if(roll == 3){message.reply("rolled a 3!");}
+            else if(roll == 4){message.reply("rolled a 4!");}
+            else if(roll == 5){message.reply("rolled a 5!");}
+            else if(roll == 6){message.reply("rolled a 6!");}
             else {message.channel.reply("rolled a six-sided die!");}
           }
 
