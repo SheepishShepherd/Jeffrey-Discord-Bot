@@ -35,7 +35,7 @@
 //Rolls a die(dice) based on inputs of the user.
         
         default:
-          message.channel.sendMessage("That's not a command, silly!")(msg => {msg.delete(10000)}).catch();
+          message.channel.sendMessage("That's not a command, silly!").then(msg => {msg.delete(10000)}).catch();
 //If the user tries to run a command that does not exist, the bot will state so
     }
   });
