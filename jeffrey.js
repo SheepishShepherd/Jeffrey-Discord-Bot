@@ -5,10 +5,10 @@
   bot.on('ready', () => {console.log('Jeffrey is ready to play!');});
 
   bot.on('guildMemberAdd', member => {
-    message.guild.channels.find("name", "welcome").sendMessage(member.toString() + " has entered the pasture!");
-    member.addRole(member.guild.roles.find("name", "Sheep"));
+    let sheepRole = message.guild.roles.get("360170519535943692");
+    member.addRole(sheepRole); 
   });
-//Gives new users the "Sheep" role and gives a welcome message in the "welcome" channel.
+//Gives new users the "Sheep" role
 
   bot.on('message', message => {
     if(!message.content.startsWith(prefix)) return;
