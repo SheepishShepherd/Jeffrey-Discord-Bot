@@ -27,8 +27,8 @@
           if(!args[1]){message.channel.sendMessage("You rolled a six-sided die!");}
 
           else if(args[1]){
-            if(args[1] = "6"){message.channel.sendMessage("You rolled a six-sided die!");}
-            else if(args[1] = "20"){message.channel.sendMessage("You rolled a twenty-sided die!");}
+            if(args[1] == "6"){message.channel.sendMessage("You rolled a six-sided die!");}
+            else if(args[1] == "20"){message.channel.sendMessage("You rolled a twenty-sided die!");}
             else{message.channel.sendMessage("That's not a valid number!");}
           }
         
