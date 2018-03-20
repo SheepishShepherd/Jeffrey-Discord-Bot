@@ -29,7 +29,8 @@
 //Refers the help channel for a command list
         
         case "test":
-          if(args[1]){message.channel.sendMessage(message.mentions.members.first() + "... Success!!");}
+          var ment = message.mentions.members.first();
+          if(args[1]){message.channel.sendMessage(ment.username + "... Success!!");}
           else{message.channel.sendMessage(message.author.username + "... Failure...");}
           break;
         
