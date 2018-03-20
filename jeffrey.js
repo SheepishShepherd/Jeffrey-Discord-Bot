@@ -29,7 +29,7 @@
 //Refers the help channel for a command list
         
         case "test":
-          message.channel.sendMessage(message.author);
+          message.channel.sendMessage(message.author.name);
           break;
         
         case "profile":
