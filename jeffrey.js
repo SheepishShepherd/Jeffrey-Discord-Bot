@@ -28,6 +28,14 @@
           break;
 //Refers the help channel for a command list
         
+        case "profile":
+          var prof = new Discord.RichEmbed()
+            .addField(message.author.toString(), "Member")
+            .setColor(0X00FFF)
+            .setThumbnail(message.author.avatarURL)
+          message.channel.sendEmbed(prof);
+        break;
+        
         case "flip":
           var roll = Math.floor((Math.random() * 2) + 1);
           if(roll == 1){message.reply("got heads!");}
