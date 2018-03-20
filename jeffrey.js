@@ -29,10 +29,9 @@
 //Refers the help channel for a command list
         
         case "profile":
-
           var prof = new Discord.RichEmbed()
             .addField(message.author.username, "Nickname placeholder")
-            .addField("", "Member")
+            .addField("Member", "Member")
             .setColor(0X00FFFF)
             .setThumbnail(message.author.avatarURL)
           message.channel.sendEmbed(prof);
