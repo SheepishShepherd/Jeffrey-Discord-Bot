@@ -28,6 +28,10 @@
           break;
 //Refers the help channel for a command list
         
+        case "test":
+          message.channel.sendMessage(message);
+          break;
+        
         case "profile":
             var roleA = message.guild.roles.find("name", "The Shepherd");
             var roleB = message.guild.roles.find("name", "Bot");
