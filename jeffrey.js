@@ -70,10 +70,10 @@
               else if (ment.member.roles.has(roleD.id)) {roleColor = "0xd9b3ff"; roleName = "Sheep Companion";}
               else {roleColor = "0xd9b3ff"; roleName = "Sheep";}
             var prof = new Discord.RichEmbed()
-              .addField(ment.author.username, "Nickname placeholder")
+              .addField(ment.username, "Nickname placeholder")
               .setFooter(roleName)
               .setColor(roleColor)
-              .setThumbnail(ment.author.avatarURL)
+              .setThumbnail(ment.avatarURL)
             message.channel.sendEmbed(prof);
           }
           else{message.channel.sendMessage("I broke...");}
