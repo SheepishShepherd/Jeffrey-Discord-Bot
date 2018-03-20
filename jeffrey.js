@@ -30,8 +30,8 @@
         
         case "test":
           var ment = message.mentions.members.first();
-          if(args[1]){message.channel.sendMessage(ment.nickname + "... Success!!");}
-          else{message.channel.sendMessage(message.author.username + "... Failure...");}
+          if(args[1]){message.channel.sendMessage(ment.nickname + " is " + ment.username);}
+          else{message.channel.sendMessage("You need to mention someone!");}
           break;
         
         case "profile":
