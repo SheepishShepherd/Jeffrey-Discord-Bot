@@ -35,17 +35,18 @@
             var roleD = message.guild.roles.find("name", "Sheep Companions");
             var roleE = message.guild.roles.find("name", "The Sheep");
             var roleColor = "";
-            if (message.member.roles.has(roleA.id)) {roleColor = "0xffaa00";}
-              else if (message.member.roles.has(roleB.id)) {roleColor = "0xff6464";}
-              else if (message.member.roles.has(roleC.id)) {roleColor = "0x80b6e5";}
-              else if (message.member.roles.has(roleD.id)) {roleColor = "0xd9b3ff";}
-              else {roleColor = "0xd9b3ff";}
-          var prof = new Discord.RichEmbed()
-            .addField(message.author.username, "Nickname placeholder")
-            .addField("Member", "Member")
-            .setColor(roleColor)
-            .setThumbnail(message.author.avatarURL)
-          message.channel.sendEmbed(prof);
+            var roleName = ""
+            if (message.member.roles.has(roleA.id)) {roleColor = "0xffaa00"; roleName = "The Shepherd";}
+              else if (message.member.roles.has(roleB.id)) {roleColor = "0xff6464"; roleName = "Bot";}
+              else if (message.member.roles.has(roleC.id)) {roleColor = "0x80b6e5"; roleName = "Sheep Helper";}
+              else if (message.member.roles.has(roleD.id)) {roleColor = "0xd9b3ff"; roleName = "Sheep Companion";}
+              else {roleColor = "0xd9b3ff"; roleName = "Sheep";}
+            var prof = new Discord.RichEmbed()
+              .addField(message.author.username, "Nickname placeholder")
+              .addField("", roleName)
+              .setColor(roleColor)
+              .setThumbnail(message.author.avatarURL)
+            message.channel.sendEmbed(prof);
         break;
         
         case "flip":
