@@ -29,10 +29,23 @@
 //Refers the help channel for a command list
         
         case "profile":
+            var roleA = message.guild.roles.find("name", "The Shepherd");
+            var roleB = message.guild.roles.find("name", "Bot");
+            var roleC = message.guild.roles.find("name", "Shepherd Helpers");
+            var roleD = message.guild.roles.find("name", "Sheep Companions");
+            var roleE = message.guild.roles.find("name", "The Sheep");
+            var roleColor = "";
+            if (message.member.roles.has(roleA.id)) {roleColor = "0xffaa00";}
+              else if (message.member.roles.has(roleB.id)) {roleColor = "0xff6464";}
+              else if (message.member.roles.has(roleC.id)) {roleColor = "0x80b6e5";}
+              else if (message.member.roles.has(roleD.id)) {roleColor = "0xd9b3ff";}
+              else {roleColor = "0xd9b3ff";}
+               // not allowed access
+            }
           var prof = new Discord.RichEmbed()
             .addField(message.author.username, "Nickname placeholder")
             .addField("Member", "Member")
-            .setColor(0X00FFFF)
+            .setColor(roleColor)
             .setThumbnail(message.author.avatarURL)
           message.channel.sendEmbed(prof);
         break;
