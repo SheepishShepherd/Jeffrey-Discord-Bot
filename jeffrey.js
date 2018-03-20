@@ -4,8 +4,8 @@
 
   bot.on('ready', () => {console.log('Jeffrey is ready to play!');});
 
-  bot.on('guildMemberAdd', (member) => {
-    let sheepRole = member.guild.roles.get("360170519535943692");
+  bot.on('guildMemberAdd', member => {
+    let sheepRole = member.guild.roles.find("name", "Sheep");
     member.addRole(sheepRole); 
   });
 //Gives new users the "Sheep" role
