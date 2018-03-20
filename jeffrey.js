@@ -40,8 +40,6 @@
               else if (message.member.roles.has(roleC.id)) {roleColor = "0x80b6e5";}
               else if (message.member.roles.has(roleD.id)) {roleColor = "0xd9b3ff";}
               else {roleColor = "0xd9b3ff";}
-               // not allowed access
-            }
           var prof = new Discord.RichEmbed()
             .addField(message.author.username, "Nickname placeholder")
             .addField("Member", "Member")
