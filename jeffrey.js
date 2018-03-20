@@ -44,7 +44,7 @@
             }
           var prof = new Discord.RichEmbed()
             .addField(message.author.username, "Nickname placeholder")
-            .addField(null, "Member")
+            .addField("", "Member")
             .setColor(roleColor)
             .setThumbnail(message.author.avatarURL)
           message.channel.sendEmbed(prof);
