@@ -30,8 +30,8 @@
         
         case "test":
           var ment = message.mentions.members.first();
-          if(args[1]){message.channel.sendMessage(ment.nickname + " is " + ment.username + "... " + message.mentions.members.first() + " not " + message.author.username);}
-          else{message.channel.sendMessage("You need to mention someone!");}
+          if(args[1]){message.channel.send(ment.nickname + " is " + ment.username + "... " + message.mentions.members.first() + " not " + message.author.username);}
+          else{message.channel.send("You need to mention someone!");}
           break;
         
         case "profile":
@@ -76,7 +76,7 @@
               .setThumbnail(ment.avatarURL)
             message.channel.sendEmbed(prof);
           }
-          else{message.channel.sendMessage("I broke...");}
+          else{message.channel.send("I broke...");}
         break;
         
         case "flip":
@@ -134,14 +134,14 @@
               else if(d20roll == 20){message.reply("rolled a 20!");}
               else {message.reply("rolled a twenty-sided die!");}
             }
-            else{message.channel.sendMessage("That's not a valid number!");}}
+            else{message.channel.send("That's not a valid number!");}}
         
           else{return;}
           break;
 //Rolls a die based on inputs of the user
         
         default:
-          message.channel.sendMessage("That's not a command, silly!").then(msg => {msg.delete(10000)}).catch();
+          message.channel.send("That's not a command, silly!").then(msg => {msg.delete(10000)}).catch();
 //If the user tries to run a command that does not exist, the bot will state so
     }
   });
