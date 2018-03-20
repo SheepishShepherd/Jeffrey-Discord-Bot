@@ -30,7 +30,7 @@
         
         case "profile":
           var prof = new Discord.RichEmbed()
-            .addField(message.author.toString(), "Member")
+            .addField(message.author, "Member")
             .setColor(0X00FFF)
             .setThumbnail(message.author.avatarURL)
           message.channel.sendEmbed(prof);
