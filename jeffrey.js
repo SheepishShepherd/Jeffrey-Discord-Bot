@@ -29,7 +29,8 @@
 //Refers the help channel for a command list
         
         case "test":
-          message.channel.sendMessage(message.author.username);
+          if(args[1]){message.channel.sendMessage("Success");}
+          else{message.channel.sendMessage(message.author.username);}
           break;
         
         case "profile":
