@@ -24,7 +24,7 @@
 //Replies "Pong!" if the user uses /ping
 
         case "help":
-          message.channel.sendMessage('If you need help with commands, go to #command-list');
+          message.channel.send('If you need help with commands, go to #command-list');
           break;
 //Refers the help channel for a command list
         
