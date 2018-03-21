@@ -56,6 +56,7 @@
               else {roleColor = "0xfffeda"; roleName = "Sheep";}
             var prof = new Discord.RichEmbed()
               .addField(message.author.username, roleName)
+              .addField("Nickname", message.member.nickname)
               .setFooter(message.author.id)
               .setColor(roleColor)
               .setThumbnail(message.author.avatarURL)
