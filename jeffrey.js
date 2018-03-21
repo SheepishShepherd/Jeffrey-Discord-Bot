@@ -55,7 +55,7 @@
               else if (message.member.roles.has(roleD.id)) {roleColor = "0xd9b3ff"; roleName = "Sheep Companion";}
               else {roleColor = "0xfffeda"; roleName = "Sheep";}
             var prof = new Discord.RichEmbed()
-              .addField(message.author.username, message.channel.guild.members.get(id).nickname)
+              .addField(message.author.username, "Nickname")
               .setFooter(roleName)
               .setColor(roleColor)
               .setThumbnail(message.author.avatarURL)
@@ -65,7 +65,7 @@
           else if(args[1]){
             var ment = message.mentions.members.first();
             var prof = new Discord.RichEmbed()
-              .addField("Username", "Nickname")
+              .addField("Username", ment.nickname)
               .setFooter("Sheep")
               .setColor(0xfffeda)
               .setThumbnail(ment.avatarURL)
