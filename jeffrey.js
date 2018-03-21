@@ -65,22 +65,10 @@
           //Applied when the user DOES mention another user
           else if(args[1]){
             var ment = message.mentions.members.first();
-            var roleA = message.guild.roles.find("name", "The Shepherd");
-            var roleB = message.guild.roles.find("name", "Bot");
-            var roleC = message.guild.roles.find("name", "Shepherd Helpers");
-            var roleD = message.guild.roles.find("name", "Sheep Companions");
-            var roleE = message.guild.roles.find("name", "The Sheep");
-            var roleColor = "";
-            var roleName = "";
-            if (ment.member.roles.has(roleA.id)) {roleColor = "0xffaa00"; roleName = "The Shepherd";}
-              else if (ment.member.roles.has(roleB.id)) {roleColor = "0xff6464"; roleName = "Bot";}
-              else if (ment.member.roles.has(roleC.id)) {roleColor = "0x80b6e5"; roleName = "Sheep Helper";}
-              else if (ment.member.roles.has(roleD.id)) {roleColor = "0xd9b3ff"; roleName = "Sheep Companion";}
-              else {roleColor = "0xd9b3ff"; roleName = "Sheep";}
             var prof = new Discord.RichEmbed()
               .addField("Username", "Nickname")
-              .setFooter(roleName)
-              .setColor(roleColor)
+              .setFooter("Sheep")
+              .setColor(0xd9b3ff)
               .setThumbnail(ment.avatarURL)
             message.channel.sendEmbed(prof);
           }
