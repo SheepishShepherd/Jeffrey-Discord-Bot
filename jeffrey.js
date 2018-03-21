@@ -73,7 +73,7 @@
             var roleE = message.guild.roles.find("name", "The Sheep");
             var roleColor = "";
             var roleName = "";
-            var userNameP = message.member.username;
+            var userNameP = message.mention.member.username;
             if (message.member.roles.has(roleA.id)) {roleColor = "0xffaa00"; roleName = "The Shepherd";}
               else if (message.member.roles.has(roleB.id)) {roleColor = "0xff6464"; roleName = "Bot";}
               else if (message.member.roles.has(roleC.id)) {roleColor = "0x80b6e5"; roleName = "Sheep Helper";}
