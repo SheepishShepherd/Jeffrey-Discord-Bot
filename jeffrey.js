@@ -34,7 +34,7 @@
           if(args[1]){message.channel.send(ment.nickname + " is " + 
                                            ment.username + "... " + 
                                            ment + " not " + 
-                                           ment.id.username + " " +
+                                           ment.id + " " +
                                            message.author.username);}
           else{message.channel.send("You need to mention someone!");}
           break;
@@ -56,7 +56,9 @@
               else {roleColor = "0xd9b3ff"; roleName = "Sheep";}
             var prof = new Discord.RichEmbed()
               .addField(message.author.username, )
-              .setFooter(roleName)
+              .addBlankField
+              .addField("Role", roleName)
+              .setFooter(message.author.id)
               .setColor(roleColor)
               .setThumbnail(message.author.avatarURL)
             message.channel.sendEmbed(prof);
