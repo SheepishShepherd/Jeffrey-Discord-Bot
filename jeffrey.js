@@ -34,7 +34,7 @@
           if(args[1]){message.channel.send(ment.nickname + " is " + 
                                            ment.username + "... " + 
                                            ment + " not " + 
-                                           ment.id +
+                                           ment.id.user +
                                            message.author.username);}
           else{message.channel.send("You need to mention someone!");}
           break;
