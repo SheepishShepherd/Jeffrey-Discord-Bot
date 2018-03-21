@@ -56,7 +56,7 @@
               else {roleColor = "0xd9b3ff"; roleName = "Sheep";}
             var prof = new Discord.RichEmbed()
               .addField(message.author.username, "Help")
-              .addBlankField
+              .addBlankField()
               .addField("Role", roleName)
               .setFooter(roleName)
               .setColor(roleColor)
