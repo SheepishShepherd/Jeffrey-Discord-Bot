@@ -58,7 +58,7 @@
               .addField(message.author.username, )
               .addBlankField
               .addField("Role", roleName)
-              .setFooter(message.author.id)
+              .setFooter(message.author.username.id)
               .setColor(roleColor)
               .setThumbnail(message.author.avatarURL)
             message.channel.sendEmbed(prof);
