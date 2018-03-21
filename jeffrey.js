@@ -55,7 +55,7 @@
               else if (message.member.roles.has(roleD.id)) {roleColor = "0xd9b3ff"; roleName = "Sheep Companion";}
               else {roleColor = "0xfffeda"; roleName = "Sheep";}
             var prof = new Discord.RichEmbed()
-              .addField(message.author.username, message.author.toString().nick)
+              .addField(message.author.username, message.channel.guild.members.get(id).nickname)
               .setFooter(roleName)
               .setColor(roleColor)
               .setThumbnail(message.author.avatarURL)
