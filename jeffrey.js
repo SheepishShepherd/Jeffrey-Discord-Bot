@@ -55,8 +55,7 @@
               else if (message.member.roles.has(roleD.id)) {roleColor = "0xd9b3ff"; roleName = "Sheep Companion";}
               else {roleColor = "0xd9b3ff"; roleName = "Sheep";}
             var prof = new Discord.RichEmbed()
-              .addField(message.author.username, "Help")
-              .addBlankField()
+              .addField(message.author.username, "Nickname")
               .addField("Role", roleName)
               .setFooter(roleName)
               .setColor(roleColor)
@@ -79,7 +78,7 @@
               else if (ment.member.roles.has(roleD.id)) {roleColor = "0xd9b3ff"; roleName = "Sheep Companion";}
               else {roleColor = "0xd9b3ff"; roleName = "Sheep";}
             var prof = new Discord.RichEmbed()
-              .addField(ment.user.username, "Nickname")
+              .addField("Username", "Nickname")
               .setFooter(roleName)
               .setColor(roleColor)
               .setThumbnail(ment.avatarURL)
