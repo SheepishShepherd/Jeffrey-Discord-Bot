@@ -56,7 +56,6 @@
               else if (message.member.roles.has(roleD.id)) {roleColor = "0xd9b3ff"; roleName = "Sheep Companion";}
               else {roleColor = "0xfffeda"; roleName = "Sheep";}
             var prof = new Discord.RichEmbed()
-              if(nickNameP == null){nickNameP = "Nickname not applied"}
               .addField(message.author.username, nickNameP)
               .addField("PlaceHolder", "PlaceHolder2")
               .setFooter(roleName)
