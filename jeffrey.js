@@ -30,7 +30,10 @@
         
         case "test":
           var ment = message.mentions.members.first();
-          if(args[1]){message.channel.send(ment.nickname + " is " + ment.username + "... " + message.mentions.members.first() + " not " + message.author);}
+          if(args[1]){message.channel.send(ment.nickname + " is " + 
+                                           ment.username + "... " + 
+                                           message.mentions.members.first() + " not " + 
+                                           message.author);}
           else{message.channel.send("You need to mention someone!");}
           break;
         
@@ -48,6 +51,7 @@
               else if (message.member.roles.has(roleC.id)) {roleColor = "0x80b6e5"; roleName = "Sheep Helper";}
               else if (message.member.roles.has(roleD.id)) {roleColor = "0xd9b3ff"; roleName = "Sheep Companion";}
               else {roleColor = "0xd9b3ff"; roleName = "Sheep";}
+            var nickm = message.author.id;
             var prof = new Discord.RichEmbed()
               .addField(message.author.username, "Nickname")
               .setFooter(roleName)
@@ -70,7 +74,7 @@
               else if (ment.member.roles.has(roleD.id)) {roleColor = "0xd9b3ff"; roleName = "Sheep Companion";}
               else {roleColor = "0xd9b3ff"; roleName = "Sheep";}
             var prof = new Discord.RichEmbed()
-              .addField(ment.username, "Nickname placeholder")
+              .addField(ment.username, nickm)
               .setFooter(roleName)
               .setColor(roleColor)
               .setThumbnail(ment.avatarURL)
