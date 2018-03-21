@@ -58,7 +58,7 @@
             if (nickNameP == null){nickNameP = "Nickname not applied";}
             var prof = new Discord.RichEmbed()
               .addField(message.author.username, nickNameP)
-              .addField(message.member.note, "PlaceHolder2")
+              .addField("PlaceHolder1", "PlaceHolder2")
               .setFooter(roleName)
               .setColor(roleColor)
               .setThumbnail(message.author.avatarURL)
