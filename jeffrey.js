@@ -53,10 +53,9 @@
               else if (message.member.roles.has(roleB.id)) {roleColor = "0xff6464"; roleName = "Bot";}
               else if (message.member.roles.has(roleC.id)) {roleColor = "0x80b6e5"; roleName = "Sheep Helper";}
               else if (message.member.roles.has(roleD.id)) {roleColor = "0xd9b3ff"; roleName = "Sheep Companion";}
-              else {roleColor = "0xd9b3ff"; roleName = "Sheep";}
+              else {roleColor = "0xfffeda"; roleName = "Sheep";}
             var prof = new Discord.RichEmbed()
               .addField(message.author.username, "Nickname")
-              .addField("Role", roleName)
               .setFooter(roleName)
               .setColor(roleColor)
               .setThumbnail(message.author.avatarURL)
@@ -68,7 +67,7 @@
             var prof = new Discord.RichEmbed()
               .addField("Username", "Nickname")
               .setFooter("Sheep")
-              .setColor(0xd9b3ff)
+              .setColor(0xfffeda)
               .setThumbnail(ment.avatarURL)
             message.channel.sendEmbed(prof);
           }
