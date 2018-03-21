@@ -30,7 +30,7 @@
         
         case "test":
           var ment = message.mentions.members.first();
-          if(args[1]){message.channel.send(ment.nickname + " is " + ment.username + "... " + message.mentions.members.first() + " not " + message.author.username);}
+          if(args[1]){message.channel.send(ment.nickname + " is " + ment.username + "... " + message.mentions.members.first() + " not " + message.author);}
           else{message.channel.send("You need to mention someone!");}
           break;
         
@@ -49,7 +49,7 @@
               else if (message.member.roles.has(roleD.id)) {roleColor = "0xd9b3ff"; roleName = "Sheep Companion";}
               else {roleColor = "0xd9b3ff"; roleName = "Sheep";}
             var prof = new Discord.RichEmbed()
-              .addField(message.author.username, message.author.members.nick)
+              .addField(message.author.username, message.server.members.get("name", message.author).nick;)
               .setFooter(roleName)
               .setColor(roleColor)
               .setThumbnail(message.author.avatarURL)
