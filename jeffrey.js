@@ -64,28 +64,6 @@
               .setThumbnail(message.author.avatarURL)
             message.channel.sendEmbed(prof);
           }
-          //Applied when the user DOES mention another user
-          else if(args[1]){
-            var roleA = message.mentions.guild.roles.find("name", "The Shepherd");
-            var roleB = message.mentions.guild.roles.find("name", "Bot");
-            var roleC = message.mentions.guild.roles.find("name", "Shepherd Helpers");
-            var roleD = message.mentions.guild.roles.find("name", "Sheep Companions");
-            var roleE = message.mentions.guild.roles.find("name", "The Sheep");
-            var roleColor = "";
-            var roleName = "";
-            if (message.mentions.member.roles.has(roleA.id)) {roleColor = "0xffaa00"; roleName = "The Shepherd";}
-              else if (message.mentions.member.roles.has(roleB.id)) {roleColor = "0xff6464"; roleName = "Bot";}
-              else if (message.mentions.member.roles.has(roleC.id)) {roleColor = "0x80b6e5"; roleName = "Sheep Helper";}
-              else if (message.mentions.member.roles.has(roleD.id)) {roleColor = "0xd9b3ff"; roleName = "Sheep Companion";}
-              else {roleColor = "0xfffeda"; roleName = "Sheep";}
-            var ment = message.mentions.members.first();
-            var prof = new Discord.RichEmbed()
-              .addField(ment.name, ment.nickname)
-              .setFooter(roleName)
-              .setColor(roleColor)
-              .setThumbnail(ment.avatarURL)
-            message.channel.sendEmbed(prof);
-          }
           else{message.channel.send("I broke...");}
         break;
 
