@@ -4,41 +4,43 @@
 
   bot.on('ready', () => {console.log('Jeffrey is ready to play!');});
 
+//Gives new users the "Sheep" role
   bot.on('guildMemberAdd', member => {
     var sheepRole = member.guild.roles.find("name", "Sheep");
     member.addRole(sheepRole); 
   });
-//Gives new users the "Sheep" role
 
+//If the message does not start with the set prefix, the bot will ignore the message.
   bot.on('message', message => {
     if(!message.content.startsWith(prefix)) return;
     if(message.author.equals(bot.user)) return;
-//If the message does not start with the set prefix, the bot will ignore the message.
     
     var args = message.content.substring(prefix.length).split(" ");
-    
-    switch (args[0].toLowerCase()) {   
+    switch (args[0].toLowerCase()) {  
+        
+//Replies "Pong!" if the user uses /ping
         case "ping":
           message.reply('PONG! :ping_pong:');
           break;
-//Replies "Pong!" if the user uses /ping
 
+//Refers the help channel for a command list
         case "help":
           message.channel.send('If you need help with commands, go to #command-list');
           break;
-//Refers the help channel for a command list
-        
+
+//TEST COMMAND
         case "test":
           var ment = message.mentions.members.first();
           if(args[1]){message.channel.send(ment.nickname + " is " + 
-                                           ment.username + "... " + 
+                                           ment.name + "... " + 
                                            message.mentions.members.first() + " not " + 
                                            message.author);}
           else{message.channel.send("You need to mention someone!");}
           break;
-        
+//Show a user their ID Card in the form of an Embed
         case "profile":
           if(!args[1]){
+            //If the user does NOT mention anyone, it defaults to themselves
             var roleA = message.guild.roles.find("name", "The Shepherd");
             var roleB = message.guild.roles.find("name", "Bot");
             var roleC = message.guild.roles.find("name", "Shepherd Helpers");
@@ -51,14 +53,14 @@
               else if (message.member.roles.has(roleC.id)) {roleColor = "0x80b6e5"; roleName = "Sheep Helper";}
               else if (message.member.roles.has(roleD.id)) {roleColor = "0xd9b3ff"; roleName = "Sheep Companion";}
               else {roleColor = "0xd9b3ff"; roleName = "Sheep";}
-            var nickm = message.author.name;
             var prof = new Discord.RichEmbed()
-              .addField(message.author.username, nickm)
+              .addField(message.author.username, )
               .setFooter(roleName)
               .setColor(roleColor)
               .setThumbnail(message.author.avatarURL)
             message.channel.sendEmbed(prof);
           }
+          //Applied when the user DOES mention another user
           else if(args[1]){
             var ment = message.mentions.members.first();
             var roleA = message.guild.roles.find("name", "The Shepherd");
@@ -82,15 +84,16 @@
           }
           else{message.channel.send("I broke...");}
         break;
-        
+
+//Flips a coin that lands on either heads or tails
         case "flip":
           var roll = Math.floor((Math.random() * 2) + 1);
           if(roll == 1){message.reply("got heads!");}
           else if(roll == 2){message.reply("got tails!");}
           else{message.reply("flipped a coin!");}
           break;
-//Flips a coin that lands on either heads or tails
         
+//Rolls a die based on inputs of the user
         case "roll":
           if(!args[1]){
             var roll = Math.floor((Math.random() * 6) + 1);
@@ -100,8 +103,7 @@
             else if(roll == 4){message.reply("rolled a 4!");}
             else if(roll == 5){message.reply("rolled a 5!");}
             else if(roll == 6){message.reply("rolled a 6!");}
-            else {message.reply("rolled a six-sided die!");}
-          }
+            else {message.reply("rolled a six-sided die!");}}
 
           else if(args[1]){
             if(args[1] == "6"){
@@ -112,8 +114,8 @@
               else if(d6roll == 4){message.reply("rolled a 4!");}
               else if(d6roll == 5){message.reply("rolled a 5!");}
               else if(d6roll == 6){message.reply("rolled a 6!");}
-              else {message.reply("rolled a six-sided die!");}
-            }
+              else {message.reply("rolled a six-sided die!");}}
+            
             else if(args[1] == "20"){
               var d20roll = Math.floor((Math.random() * 20) + 1);
               if(d20roll == 1){message.reply("rolled a 1!");}
@@ -136,17 +138,17 @@
               else if(d20roll == 18){message.reply("rolled a 18!");}
               else if(d20roll == 19){message.reply("rolled a 19!");}
               else if(d20roll == 20){message.reply("rolled a 20!");}
-              else {message.reply("rolled a twenty-sided die!");}
-            }
+              
+              else {message.reply("rolled a twenty-sided die!");}}
+            
             else{message.channel.send("That's not a valid number!");}}
         
           else{return;}
           break;
-//Rolls a die based on inputs of the user
         
+//If the user tries to run a command that does not exist, the bot will state so
         default:
           message.channel.send("That's not a command, silly!").then(msg => {msg.delete(10000)}).catch();
-//If the user tries to run a command that does not exist, the bot will state so
     }
   });
     
