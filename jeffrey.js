@@ -80,7 +80,7 @@
               else {roleColor = "0xfffeda"; roleName = "Sheep";}
             var ment = message.mentions.members.first();
             var prof = new Discord.RichEmbed()
-              .addField(ment, ment.nickname)
+              .addField(ment.name, ment.nickname)
               .setFooter("roleName")
               .setColor(roleColor)
               .setThumbnail(ment.avatarURL)
