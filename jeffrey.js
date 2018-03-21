@@ -31,10 +31,10 @@
 //TEST COMMAND
         case "test":
           var ment = message.mentions.members.first();
-          if(args[1]){message.channel.send(ment.nickname + " is " + 
-                                           ment.username + "... " + 
-                                           ment + " not " + 
-                                           ment.id + " " +
+          if(args[1]){message.channel.send(ment.nickname + " // " + 
+                                           ment.username + " // " + 
+                                           ment + " // " + 
+                                           ment.id + " // " +
                                            message.author.username);}
           else{message.channel.send("You need to mention someone!");}
           break;
@@ -55,7 +55,7 @@
               else if (message.member.roles.has(roleD.id)) {roleColor = "0xd9b3ff"; roleName = "Sheep Companion";}
               else {roleColor = "0xfffeda"; roleName = "Sheep";}
             var prof = new Discord.RichEmbed()
-              .addField(message.author.username, "Nickname")
+              .addField(message.author.username, "nickname")
               .setFooter(roleName)
               .setColor(roleColor)
               .setThumbnail(message.author.avatarURL)
@@ -65,7 +65,7 @@
           else if(args[1]){
             var ment = message.mentions.members.first();
             var prof = new Discord.RichEmbed()
-              .addField("Username", ment.nickname)
+              .addField("username", ment.nickname)
               .setFooter("Sheep")
               .setColor(0xfffeda)
               .setThumbnail(ment.avatarURL)
