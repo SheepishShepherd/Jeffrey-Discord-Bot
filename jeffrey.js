@@ -49,14 +49,15 @@
             var roleE = message.guild.roles.find("name", "The Sheep");
             var roleColor = "";
             var roleName = "";
+            var nickNameP = message.member.nickname;
             if (message.member.roles.has(roleA.id)) {roleColor = "0xffaa00"; roleName = "The Shepherd";}
               else if (message.member.roles.has(roleB.id)) {roleColor = "0xff6464"; roleName = "Bot";}
               else if (message.member.roles.has(roleC.id)) {roleColor = "0x80b6e5"; roleName = "Sheep Helper";}
               else if (message.member.roles.has(roleD.id)) {roleColor = "0xd9b3ff"; roleName = "Sheep Companion";}
               else {roleColor = "0xfffeda"; roleName = "Sheep";}
             var prof = new Discord.RichEmbed()
-              if(message.member.nickname = null){message.member.nickname = "Nickname not applied"}
-              .addField(message.author.username, message.member.nickname)
+              if(nickNameP = null){nickNameP = "Nickname not applied"}
+              .addField(message.author.username, nickNameP)
               .addField("PlaceHolder", "PlaceHolder2")
               .setFooter(roleName)
               .setColor(roleColor)
