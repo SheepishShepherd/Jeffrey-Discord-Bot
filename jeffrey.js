@@ -58,7 +58,7 @@
               .addField(message.author.username, "Help")
               .addBlankField
               .addField("Role", roleName)
-              .setFooter(message.author.id)
+              .setFooter(roleName)
               .setColor(roleColor)
               .setThumbnail(message.author.avatarURL)
             message.channel.sendEmbed(prof);
@@ -79,7 +79,7 @@
               else if (ment.member.roles.has(roleD.id)) {roleColor = "0xd9b3ff"; roleName = "Sheep Companion";}
               else {roleColor = "0xd9b3ff"; roleName = "Sheep";}
             var prof = new Discord.RichEmbed()
-              .addField(ment.username, "Nickname")
+              .addField(ment.user.username, "Nickname")
               .setFooter(roleName)
               .setColor(roleColor)
               .setThumbnail(ment.avatarURL)
