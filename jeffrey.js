@@ -81,7 +81,7 @@
             var ment = message.mentions.members.first();
             var prof = new Discord.RichEmbed()
               .addField(ment.name, ment.nickname)
-              .setFooter("roleName")
+              .setFooter(roleName)
               .setColor(roleColor)
               .setThumbnail(ment.avatarURL)
             message.channel.sendEmbed(prof);
