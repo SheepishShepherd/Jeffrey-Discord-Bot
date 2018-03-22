@@ -92,7 +92,7 @@
         case "roll":
           if(!args[1]){
             var roll = Math.floor((Math.random() * 6) + 1);
-            message.reply("rolled a " + roll + "!");
+            message.reply("rolled a " + roll + "!");}
 
           else if(args[1]){
             if(args[1] == "6"){
