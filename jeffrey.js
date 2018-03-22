@@ -60,7 +60,7 @@
               .setThumbnail(message.author.avatarURL)
             message.channel.sendEmbed(prof);
           }
-          else if(args[1]){
+          else if(args[1] && args[1] == message.mentions.members.first();){
             var mentM = message.mentions.members.first();
             var mentU = message.mentions.users.first();
             var nickNameMP = mentM.nickname;
