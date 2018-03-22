@@ -2,8 +2,6 @@
   const bot = new Discord.Client();
   const prefix = "!";
 
-  String[] memberList = {"@SheepishShepherd#1247","@Cloftus#2645","@Jeffrey#5631"};
-
   bot.on('ready', () => {console.log('Jeffrey is ready to play!');});
 
 //Gives new users the "Sheep" role
@@ -31,7 +29,13 @@
           break;
 
 //TEST COMMAND
-
+        case "test":
+          if(args[1]){
+            if(args[1] = "@SheepishShepherd#1247" || args[1] = "@Cloftus#2645" || args[1] = "@Jeffrey#5631")
+            {message.channel.send('One of the variables was mentioned!');}
+            else{message.channel.send('Sorry, the variable was not mentioned.');}}
+          else{message.channel.send('It broke...');}
+          break;
 //Show a user their ID Card in the form of an Embed
         case "profile":
             var roleA = message.guild.roles.find("name", "The Shepherd");
