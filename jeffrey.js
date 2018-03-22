@@ -32,7 +32,7 @@
 //Pet
         case "pet":
           if (talkedRecently.has(message.author.id)) {
-            message.channel.send("I appreciate your enthusiasm " + message.author.username + ", but I need a break.");}
+            message.channel.send("I appreciate your enthusiasm " + message.author.username + ", but I need a break. Give me 5 minutes.");}
           else{message.channel.send({files: ["https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/Jeffrey/cuteJeffrey.jpg"]});
           talkedRecently.add(message.author.id);
           setTimeout(() => {talkedRecently.delete(message.author.id);}, 300000);}
