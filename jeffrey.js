@@ -31,7 +31,7 @@
 //TEST COMMAND
         case "test":
           if(args[1]){
-            if(args[1] = "@SheepishShepherd#1247" || args[1] = "@Cloftus#2645" || args[1] = "@Jeffrey#5631")
+            if(args[1] = "SheepishShepherd1247" || args[1] = "Cloftus2645" || args[1] = "Jeffrey5631")
             {message.channel.send('One of the variables was mentioned!');}
             else{message.channel.send('Sorry, the variable was not mentioned.');}}
           else{message.channel.send('It broke...');}
