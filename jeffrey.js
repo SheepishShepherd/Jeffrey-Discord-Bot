@@ -99,7 +99,6 @@
 -            else if(roll == 5){message.reply("rolled a 5!");}
 -            else if(roll == 6){message.reply("rolled a 6!");}
 -            else {message.reply("rolled a six-sided die!");}}
-+            message.reply("rolled a " + roll + "!");
  
            else if(args[1]){
              if(args[1] == "6"){
@@ -111,7 +110,6 @@
 -              else if(d6roll == 5){message.reply("rolled a 5!");}
 -              else if(d6roll == 6){message.reply("rolled a 6!");}
 -              else {message.reply("rolled a six-sided die!");}}
-+              message.reply("rolled a " + d6roll + "!");
              
              else if(args[1] == "20"){
                var d20roll = Math.floor((Math.random() * 20) + 1);
@@ -135,9 +133,7 @@
 -              else if(d20roll == 18){message.reply("rolled a 18!");}
 -              else if(d20roll == 19){message.reply("rolled a 19!");}
 -              else if(d20roll == 20){message.reply("rolled a 20!");}
--              
 -              else {message.reply("rolled a twenty-sided die!");}}
-+              message.reply("rolled a " + d20roll + "!");
              
              else{message.channel.send("That's not a valid number!");}}
         
