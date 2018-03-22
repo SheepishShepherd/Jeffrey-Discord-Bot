@@ -3,9 +3,9 @@
   const prefix = "!";
 
   String[] memberList = new String[3];
-  thisIsAStringArray[0] = "@SheepishShepherd#1247";
-  thisIsAStringArray[1] = "@Cloftus#2645";
-  thisIsAStringArray[2] = "@Jeffrey#5631";
+  memberList[0] = "@SheepishShepherd#1247";
+  memberList[1] = "@Cloftus#2645";
+  memberList[2] = "@Jeffrey#5631";
 
   bot.on('ready', () => {console.log('Jeffrey is ready to play!');});
 
