@@ -67,10 +67,10 @@
             var mentM = message.mentions.members.first();
             var mentU = message.mentions.users.first();
             var nickNameMP = mentM.nickname;
-            if (mentM.member.roles.has(roleA.id)) {roleColor = "0xffaa00"; roleName = "The Shepherd";}
-              else if (mentM.member.roles.has(roleB.id)) {roleColor = "0xff6464"; roleName = "Bot";}
-              else if (mentM.member.roles.has(roleC.id)) {roleColor = "0x80b6e5"; roleName = "Sheep Helper";}
-              else if (mentM.member.roles.has(roleD.id)) {roleColor = "0xd9b3ff"; roleName = "Sheep Companion";}
+            if (mentM.roles.has(roleA.id)) {roleColor = "0xffaa00"; roleName = "The Shepherd";}
+              else if (mentM.roles.has(roleB.id)) {roleColor = "0xff6464"; roleName = "Bot";}
+              else if (mentM.roles.has(roleC.id)) {roleColor = "0x80b6e5"; roleName = "Sheep Helper";}
+              else if (mentM.roles.has(roleD.id)) {roleColor = "0xd9b3ff"; roleName = "Sheep Companion";}
               else {roleColor = "0xfffeda"; roleName = "Sheep";}
             if (nickNameMP == null){nickNameP = "No Nickname";}
             var prof = new Discord.RichEmbed()
