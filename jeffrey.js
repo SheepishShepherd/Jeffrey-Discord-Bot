@@ -62,7 +62,7 @@
               .setThumbnail(message.author.avatarURL)
             message.channel.sendEmbed(prof);
           }
-          if(args[1]){
+          else if(args[1]){
             //If the user does mention anyone, pulls the mentioned user's data
             var mentM = message.mentions.members.first();
             var mentU = message.mentions.users.first();
