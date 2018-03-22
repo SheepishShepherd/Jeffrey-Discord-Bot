@@ -35,7 +35,7 @@
                                            message.mentions.users.first().name + " // " + 
                                            ment.status + " // " + 
                                            ment.id + " // " +
-                                           ment.avatar);}
+                                           ment.avatarURL);}
           else{message.channel.send("You need to mention someone!");}
           break;
 //Show a user their ID Card in the form of an Embed
