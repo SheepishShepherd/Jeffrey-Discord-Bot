@@ -33,7 +33,7 @@
           var mM = message.mentions.members.first();
           var mU = message.mentions.users.first();
           if(args[1]){message.channel.send(mM.id + " // " +
-                                           mU.displayAvatarURL);}
+                                           message.author.avatarURL);}
           else{message.channel.send("You need to mention someone!");}
           break;
 //Show a user their ID Card in the form of an Embed
@@ -73,7 +73,6 @@
               .addField("PlaceHolder1", "PlaceHolder2")
               .setFooter(roleName)
               .setColor(roleColor)
-              .setThumbnail(mU.displayAvatarURL)
             message.channel.sendEmbed(prof);
           }
           else{message.channel.send("I broke...");}
