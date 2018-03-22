@@ -2,6 +2,8 @@
   const bot = new Discord.Client();
   const prefix = "!";
 
+  String[] memberList = {"@SheepishShepherd#1247","@Cloftus#2645","@Jeffrey#5631"};
+
   bot.on('ready', () => {console.log('Jeffrey is ready to play!');});
 
 //Gives new users the "Sheep" role
@@ -30,11 +32,11 @@
 
 //TEST COMMAND
         case "test":
-          var mM = message.mentions.members.first();
-          var mU = message.mentions.users.first();
-          if(args[1]){message.channel.send(mM.id + " // " +
-                                           message.author.avatarURL);}
-          else{message.channel.send("You need to mention someone!");}
+          if(args[1]){
+            if([args[1]].indexOf(fruit) >= 0){message.channel.send("Variable found!");}
+            else{message.channel.send("That wasn't one of the variables!");}
+          }
+          else{message.channel.send("It didn't work...");}
           break;
 //Show a user their ID Card in the form of an Embed
         case "profile":
@@ -72,7 +74,7 @@
               else if (mentM.roles.has(roleC.id)) {roleColor = "0x80b6e5"; roleName = "Sheep Helper";}
               else if (mentM.roles.has(roleD.id)) {roleColor = "0xd9b3ff"; roleName = "Sheep Companion";}
               else {roleColor = "0xfffeda"; roleName = "Sheep";}
-            if (nickNameMP == null){nickNameP = "No Nickname";}
+            if (nickNameMP == null){nickNameMP = "No Nickname";}
             var prof = new Discord.RichEmbed()
               .addField(mentU.username, nickNameMP)
               .addField("PlaceHolder1", "PlaceHolder2")
