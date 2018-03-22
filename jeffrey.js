@@ -30,7 +30,9 @@
 
 //TEST COMMAND
         case "test":
-          message.reply('Test test 123');
+          var num = 6;
+          var numS = num.toString();
+          message.channel.send(numS);
           break;
 //Show a user their ID Card in the form of an Embed
         case "profile":
