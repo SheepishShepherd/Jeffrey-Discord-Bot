@@ -2,7 +2,10 @@
   const bot = new Discord.Client();
   const prefix = "!";
 
-  String[] memberList = {"@SheepishShepherd#1247","@Cloftus#2645","@Jeffrey#5631"};
+  String[] memberList = new String[3];
+  thisIsAStringArray[0] = "@SheepishShepherd#1247";
+  thisIsAStringArray[1] = "@Cloftus#2645";
+  thisIsAStringArray[2] = "@Jeffrey#5631";
 
   bot.on('ready', () => {console.log('Jeffrey is ready to play!');});
 
