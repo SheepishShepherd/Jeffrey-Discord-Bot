@@ -61,7 +61,7 @@
             message.channel.sendEmbed(prof);
           }
           else if(args[1]){
-            if(args[1] = message.mentions.members.first();){
+            if(args[1] == message.mentions.members.first();){
             var mentM = message.mentions.members.first();
             var mentU = message.mentions.users.first();
             var nickNameMP = mentM.nickname;
