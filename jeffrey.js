@@ -33,10 +33,10 @@
           var mentM = message.mentions.members.first();
           var mentU = message.mentions.users.first();
           if(args[1]){message.channel.send(mentM.nickname + " // " + 
-                                           message.mentions.users.first().name + " // " + 
+                                           mentU.username + " // " + 
                                            mentM.status + " // " + 
                                            mentM.id + " // " +
-                                           mentU.displayAvatarURL);}
+                                           mentU.defaultAvatarURL);}
           else{message.channel.send("You need to mention someone!");}
           break;
 //Show a user their ID Card in the form of an Embed
