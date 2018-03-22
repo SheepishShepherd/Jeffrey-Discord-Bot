@@ -2,11 +2,6 @@
   const bot = new Discord.Client();
   const prefix = "!";
 
-  String[] memberList = new String[3];
-  memberList[0] = "@SheepishShepherd#1247";
-  memberList[1] = "@Cloftus#2645";
-  memberList[2] = "@Jeffrey#5631";
-
   bot.on('ready', () => {console.log('Jeffrey is ready to play!');});
 
 //Gives new users the "Sheep" role
@@ -34,14 +29,7 @@
           break;
 
 //TEST COMMAND
-        case "test":
-          if(args[1]){
-            for (var i = 0; i < memberList.length; i++) {
-            if (message.content.includes(memberList[i])){message.channel.send("Variable found!");}
-            else{message.channel.send("That wasn't one of the variables!");}
-          }
-          else{message.channel.send("It didn't work...");}
-          break;
+
 //Show a user their ID Card in the form of an Embed
         case "profile":
             var roleA = message.guild.roles.find("name", "The Shepherd");
