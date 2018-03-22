@@ -1,6 +1,7 @@
   const Discord = require('discord.js');
   const bot = new Discord.Client();
   const prefix = "!";
+  const talkedRecently = new Set();
 
   bot.on('ready', () => {console.log('Jeffrey is ready to play!');});
 
@@ -30,7 +31,6 @@
         
 //Pet
         case "pet":
-          const talkedRecently = new Set();
           if (talkedRecently.has(message.author.id)) {
             message.channel.send("I appreciate your enthusiasm " + message.author + ", but I need a break.");}
           else{message.channel.send({files: ["https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/Jeffrey/cuteJeffrey.jpg"]});
