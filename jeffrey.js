@@ -53,7 +53,7 @@
               else if (message.member.roles.has(roleC.id)) {roleColor = "0x80b6e5"; roleName = "Sheep Helper";}
               else if (message.member.roles.has(roleD.id)) {roleColor = "0xd9b3ff"; roleName = "Sheep Companion";}
               else {roleColor = "0xfffeda"; roleName = "Sheep";}
-            if (nickNameP == null){nickNameP = "Nickname not applied";}
+            if (nickNameP == null){nickNameP = "No Nickname";}
             var prof = new Discord.RichEmbed()
               .addField(message.author.username, nickNameP)
               .addField("PlaceHolder1", "PlaceHolder2")
@@ -73,15 +73,15 @@
             var roleE = message.guild.roles.find("name", "The Sheep");
             var roleColor = "";
             var roleName = "";
-            var nickNameP = message.member.nickname;
+            var nickNameMP = mentM.nickname;
             if (message.member.roles.has(roleA.id)) {roleColor = "0xffaa00"; roleName = "The Shepherd";}
               else if (message.member.roles.has(roleB.id)) {roleColor = "0xff6464"; roleName = "Bot";}
               else if (message.member.roles.has(roleC.id)) {roleColor = "0x80b6e5"; roleName = "Sheep Helper";}
               else if (message.member.roles.has(roleD.id)) {roleColor = "0xd9b3ff"; roleName = "Sheep Companion";}
               else {roleColor = "0xfffeda"; roleName = "Sheep";}
-            if (nickNameP == null){nickNameP = "Nickname not applied";}
+            if (nickNameMP == null){nickNameP = "No Nickname";}
             var prof = new Discord.RichEmbed()
-              .addField(mentU.username, mentM.nickname)
+              .addField(mentU.username, nickNameMP)
               .addField("PlaceHolder1", "PlaceHolder2")
               .setFooter(roleName)
               .setColor(roleColor)
