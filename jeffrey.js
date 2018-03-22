@@ -43,8 +43,8 @@
             var roleC = message.guild.roles.find("name", "Shepherd Helpers");
             var roleD = message.guild.roles.find("name", "Sheep Companions");
             var roleE = message.guild.roles.find("name", "The Sheep");
-            var roleColor = "";
-            var roleName = "";
+            var roleColor = "0xfffeda";
+            var roleName = "Sheep";
           if(!args[1]){
             //If the user does NOT mention anyone, it defaults to themselves
             var nickNameP = message.member.nickname;
@@ -67,11 +67,6 @@
             var mentM = message.mentions.members.first();
             var mentU = message.mentions.users.first();
             var nickNameMP = mentM.nickname;
-            if (message.mentions.members.roles.has(roleA.id)) {roleColor = "0xffaa00"; roleName = "The Shepherd";}
-              else if (message.mentions.members.roles.has(roleB.id)) {roleColor = "0xff6464"; roleName = "Bot";}
-              else if (message.mentions.members.roles.has(roleC.id)) {roleColor = "0x80b6e5"; roleName = "Sheep Helper";}
-              else if (message.mentions.members.roles.has(roleD.id)) {roleColor = "0xd9b3ff"; roleName = "Sheep Companion";}
-              else {roleColor = "0xfffeda"; roleName = "Sheep";}
             if (nickNameMP == null){nickNameP = "No Nickname";}
             var prof = new Discord.RichEmbed()
               .addField(mentU.username, nickNameMP)
