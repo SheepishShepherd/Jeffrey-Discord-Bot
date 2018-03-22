@@ -34,6 +34,7 @@
           var numS = num.toString();
           message.channel.send(num);
         break;
+        
 //Show a user their ID Card in the form of an Embed
         case "profile":
             var roleA = message.guild.roles.find("name", "The Shepherd");
@@ -100,6 +101,12 @@
              else{message.channel.send("I don't have a die with that many sides!");}}
            else{return;}
          break;
+
+//Survey
+        case "survey":
+          if(message.author.roles.has(roleA.id)){message.channel.send("It works!");}
+          else{message.channel.send("It didnt work...");}
+        break;
         
 //If the user tries to run a command that does not exist, the bot will state so
         default:
