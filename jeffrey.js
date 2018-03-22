@@ -98,7 +98,7 @@
            else if(args[1]){
              if(args[1] == "6"){message.reply("rolled a " + roll6 + "!");}
              else if(args[1] == "20"){message.reply("rolled a " + roll20 + "!");}
-             else{message.channel.send("That's not a valid number!");}}
+             else{message.channel.send("I don't have a die with that many sides!");}}
            else{return;}
          break;
         
