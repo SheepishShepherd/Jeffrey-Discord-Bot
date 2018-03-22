@@ -104,7 +104,7 @@
 
 //Survey
         case "survey":
-          if(message.author.roles.has(roleA.id)){message.channel.send("It works!");}
+          if(message.member.roles.has(roleA.id)){message.channel.send("It works!");}
           else{message.channel.send("It didnt work...");}
         break;
         
