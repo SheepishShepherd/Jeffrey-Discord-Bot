@@ -78,7 +78,7 @@
               .setThumbnail(mentU.displayAvatarURL)
             message.channel.sendEmbed(prof);
           }
-          else{message.channel.send("I broke...");}
+          else{message.channel.send("I don't think that person exists...");}
         break;
 
 //Flips a coin that lands on either heads or tails
