@@ -73,7 +73,7 @@
               .addField("PlaceHolder1", "PlaceHolder2")
               .setFooter(roleName)
               .setColor(roleColor)
-              .setThumbnail(message.author.avatarURL)
+              .setThumbnail(mU.avatarURL)
             message.channel.sendEmbed(prof);
           }
           else{message.channel.send("I broke...");}
