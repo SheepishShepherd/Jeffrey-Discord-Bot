@@ -27,6 +27,11 @@
         case "help":
           message.channel.send('If you need help with commands, go to #command-list');
         break;
+        
+//Pet
+        case "pet":
+          message.channel.send({files: ["https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/Jeffrey/cuteJeffrey.jpg"]});
+        break;
 
 //TEST COMMAND
         case "test":
@@ -104,8 +109,9 @@
 
 //Survey
         case "survey":
-          if(message.member.roles.has(message.guild.roles.find("name", "The Shepherd").id)){message.channel.send("It works!");}
-          else{message.channel.send("It didnt work...");}
+          if(message.member.roles.has(message.guild.roles.find("name", "The Shepherd").id))
+          {message.channel.send("Admin only! That's you!");}
+          else{message.channel.send("Sorry! But you aren't allowed to do that!");}
         break;
         
 //If the user tries to run a command that does not exist, the bot will state so
