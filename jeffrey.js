@@ -32,7 +32,7 @@
         case "test":
           var ment = message.mentions.members.first();
           if(args[1]){message.channel.send(ment.nickname + " // " + 
-                                           ment.name + " // " + 
+                                           message.mentions.user.name + " // " + 
                                            ment.status + " // " + 
                                            ment.id + " // " +
                                            ment.avatar);}
