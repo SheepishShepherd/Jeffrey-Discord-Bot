@@ -89,27 +89,7 @@
           break;
         
 //Rolls a die based on inputs of the user
-        case "roll":
-          if(!args[1]){
-            var roll = Math.floor((Math.random() * 6) + 1);
-            var rolln = roll.toString();
-            message.reply("rolled a " + rolln + "!");}
-
-          else if(args[1]){
-            if(args[1] == "6"){
-              var d6roll = Math.floor((Math.random() * 6) + 1);
-              var roll6 = d6roll.toString();
-              message.reply("rolled a " + roll6 + "!");}
-            
-            else if(args[1] == "20"){
-              var d20roll = Math.floor((Math.random() * 20) + 1);
-              var roll20 = d20roll.toString();
-              message.reply("rolled a " + roll20 + "!");}
-            
-            else{message.channel.send("That's not a valid number!");}}}
         
-          else{return;}
-          break;
         
 //If the user tries to run a command that does not exist, the bot will state so
         default:
