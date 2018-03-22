@@ -30,11 +30,7 @@
 
 //TEST COMMAND
         case "test":
-          if(args[1]){
-            if(args[1] = "SheepishShepherd1247" || args[1] = "Cloftus2645" || args[1] = "Jeffrey5631")
-            {message.channel.send('One of the variables was mentioned!');}
-            else{message.channel.send('Sorry, the variable was not mentioned.');}}
-          else{message.channel.send('It broke...');}
+          message.reply('Test test 123');
           break;
 //Show a user their ID Card in the form of an Embed
         case "profile":
