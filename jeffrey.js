@@ -36,7 +36,6 @@
         break;
 //Show a user their ID Card in the form of an Embed
         case "profile":
-            var ment = message.mentions.members.first();
             var roleA = message.guild.roles.find("name", "The Shepherd");
             var roleB = message.guild.roles.find("name", "Bot");
             var roleC = message.guild.roles.find("name", "Shepherd Helpers");
@@ -61,7 +60,7 @@
               .setThumbnail(message.author.avatarURL)
             message.channel.sendEmbed(prof);
           }
-          else if(args[1] && args[1] == ment){
+          else if(args[1] && args[1] == message.mentions.members.first()){
             var mentM = message.mentions.members.first();
             var mentU = message.mentions.users.first();
             var nickNameMP = mentM.nickname;
