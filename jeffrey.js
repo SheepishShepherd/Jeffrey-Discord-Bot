@@ -106,7 +106,7 @@
               var roll20 = d20roll.toString();
               message.reply("rolled a " + roll20 + "!");
             
-            else{message.channel.send("That's not a valid number!");}}
+            else{message.channel.send("That's not a valid number!");}}}
         
           else{return;}
           break;
