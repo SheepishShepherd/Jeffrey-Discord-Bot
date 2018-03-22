@@ -2,6 +2,11 @@
   const bot = new Discord.Client();
   const prefix = "!";
 
+  String[] memberList = new String[3];
+  memberList[0] = "@SheepishShepherd#1247";
+  memberList[1] = "@Cloftus#2645";
+  memberList[2] = "@Jeffrey#5631";
+
   bot.on('ready', () => {console.log('Jeffrey is ready to play!');});
 
 //Gives new users the "Sheep" role
