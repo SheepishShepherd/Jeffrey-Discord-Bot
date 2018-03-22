@@ -73,6 +73,7 @@
               .addField("PlaceHolder1", "PlaceHolder2")
               .setFooter(roleName)
               .setColor(roleColor)
+              .setThumbnail(mentU.displayAvatarURL)
             message.channel.sendEmbed(prof);
           }
           else{message.channel.send("I broke...");}
