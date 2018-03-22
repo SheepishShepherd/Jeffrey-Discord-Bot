@@ -32,10 +32,10 @@
         case "test":
           var ment = message.mentions.members.first();
           if(args[1]){message.channel.send(ment.nickname + " // " + 
-                                           message.mentions.username + " // " + 
-                                           ment + " // " + 
+                                           ment.name + " // " + 
+                                           ment.status + " // " + 
                                            ment.id + " // " +
-                                           message.author.username);}
+                                           ment.avatar);}
           else{message.channel.send("You need to mention someone!");}
           break;
 //Show a user their ID Card in the form of an Embed
