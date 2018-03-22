@@ -30,13 +30,10 @@
 
 //TEST COMMAND
         case "test":
-          var mentM = message.mentions.members.first();
-          var mentU = message.mentions.users.first();
-          if(args[1]){message.channel.send(mentM.nickname + " // " + 
-                                           mentU.username + " // " + 
-                                           mentM.status + " // " + 
-                                           mentM.id + " // " +
-                                           mentU.defaultAvatarURL);}
+          var mM = message.mentions.members.first();
+          var mU = message.mentions.users.first();
+          if(args[1]){message.channel.send(mM.id + " // " +
+                                           mU.displayAvatarURL);}
           else{message.channel.send("You need to mention someone!");}
           break;
 //Show a user their ID Card in the form of an Embed
@@ -59,6 +56,32 @@
             if (nickNameP == null){nickNameP = "Nickname not applied";}
             var prof = new Discord.RichEmbed()
               .addField(message.author.username, nickNameP)
+              .addField("PlaceHolder1", "PlaceHolder2")
+              .setFooter(roleName)
+              .setColor(roleColor)
+              .setThumbnail(message.author.avatarURL)
+            message.channel.sendEmbed(prof);
+          }
+          if(args[1]){
+            //If the user does mention anyone, pulls the mentioned user's data
+            var mentM = message.mentions.members.first();
+            var mentU = message.mentions.users.first();
+            var roleA = message.guild.roles.find("name", "The Shepherd");
+            var roleB = message.guild.roles.find("name", "Bot");
+            var roleC = message.guild.roles.find("name", "Shepherd Helpers");
+            var roleD = message.guild.roles.find("name", "Sheep Companions");
+            var roleE = message.guild.roles.find("name", "The Sheep");
+            var roleColor = "";
+            var roleName = "";
+            var nickNameP = message.member.nickname;
+            if (message.member.roles.has(roleA.id)) {roleColor = "0xffaa00"; roleName = "The Shepherd";}
+              else if (message.member.roles.has(roleB.id)) {roleColor = "0xff6464"; roleName = "Bot";}
+              else if (message.member.roles.has(roleC.id)) {roleColor = "0x80b6e5"; roleName = "Sheep Helper";}
+              else if (message.member.roles.has(roleD.id)) {roleColor = "0xd9b3ff"; roleName = "Sheep Companion";}
+              else {roleColor = "0xfffeda"; roleName = "Sheep";}
+            if (nickNameP == null){nickNameP = "Nickname not applied";}
+            var prof = new Discord.RichEmbed()
+              .addField(mentU.username, mentM.nickname)
               .addField("PlaceHolder1", "PlaceHolder2")
               .setFooter(roleName)
               .setColor(roleColor)
