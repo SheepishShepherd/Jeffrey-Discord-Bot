@@ -30,7 +30,7 @@
 
 //TEST COMMAND
         case "test":
-          var ment = message.mentions.members.first();
+          var ment = message.mentions.users.first();
           if(args[1]){message.channel.send(ment.nickname + " // " + 
                                            message.mentions.users.first().name + " // " + 
                                            ment.status + " // " + 
