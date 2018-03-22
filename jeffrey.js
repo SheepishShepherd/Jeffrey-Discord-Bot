@@ -99,12 +99,12 @@
             if(args[1] == "6"){
               var d6roll = Math.floor((Math.random() * 6) + 1);
               var roll6 = d6roll.toString();
-              message.reply("rolled a " + roll6 + "!");
+              message.reply("rolled a " + roll6 + "!");}
             
             else if(args[1] == "20"){
               var d20roll = Math.floor((Math.random() * 20) + 1);
               var roll20 = d20roll.toString();
-              message.reply("rolled a " + roll20 + "!");
+              message.reply("rolled a " + roll20 + "!");}
             
             else{message.channel.send("That's not a valid number!");}}}
         
