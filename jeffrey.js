@@ -133,7 +133,7 @@
 -              else if(d20roll == 18){message.reply("rolled a 18!");}
 -              else if(d20roll == 19){message.reply("rolled a 19!");}
 -              else if(d20roll == 20){message.reply("rolled a 20!");}
--              else {message.reply("rolled a twenty-sided die!");}}
+-              else {message.reply("rolled a twenty-sided die!");}}}
              
              else{message.channel.send("That's not a valid number!");}}
         
