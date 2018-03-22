@@ -61,7 +61,7 @@
             message.channel.sendEmbed(prof);
           }
           else if(args[1]){
-            //If the user does mention anyone, pulls the mentioned user's data
+            if(args[1] = message.mentions.members.first();){
             var mentM = message.mentions.members.first();
             var mentU = message.mentions.users.first();
             var nickNameMP = mentM.nickname;
@@ -78,7 +78,7 @@
               .setColor(roleColor)
               .setThumbnail(mentU.displayAvatarURL)
             message.channel.sendEmbed(prof);
-          }
+          }}
           else{message.channel.send("I broke...");}
         break;
 
