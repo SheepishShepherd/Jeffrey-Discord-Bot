@@ -54,7 +54,7 @@
             if (nickNameP == null){nickNameP = "No Nickname";}
             var prof = new Discord.RichEmbed()
               .addField(message.author.username, nickNameP)
-              .addField("PlaceHolder1", "PlaceHolder2")
+              .addBlankField()
               .setFooter(roleName)
               .setColor(roleColor)
               .setThumbnail(message.author.avatarURL)
@@ -72,7 +72,7 @@
             if (nickNameMP == null){nickNameMP = "No Nickname";}
             var prof = new Discord.RichEmbed()
               .addField(mentU.username, nickNameMP)
-              .addField("PlaceHolder1", "PlaceHolder2")
+              .addBlankField()
               .setFooter(roleName)
               .setColor(roleColor)
               .setThumbnail(mentU.displayAvatarURL)
