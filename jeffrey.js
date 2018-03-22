@@ -33,7 +33,8 @@
 //TEST COMMAND
         case "test":
           if(args[1]){
-            if([args[1]].indexOf(fruit) >= 0){message.channel.send("Variable found!");}
+            for (var i = 0; i < memberList.length; i++) {
+            if (message.content.includes(memberList[i])){message.channel.send("Variable found!");}
             else{message.channel.send("That wasn't one of the variables!");}
           }
           else{message.channel.send("It didn't work...");}
