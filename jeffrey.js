@@ -82,9 +82,9 @@
 
 //Flips a coin that lands on either heads or tails
         case "flip":
-          var roll = Math.floor((Math.random() * 2) + 1);
-          if(roll == 1){message.reply("got heads!");}
-          else if(roll == 2){message.reply("got tails!");}
+          var flip = Math.floor((Math.random() * 2) + 1);
+          if(flip == 1){message.reply("got heads!");}
+          else if(flip == 2){message.reply("got tails!");}
           else{message.reply("flipped a coin!");}
           break;
         
