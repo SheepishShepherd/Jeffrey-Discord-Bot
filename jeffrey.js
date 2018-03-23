@@ -26,16 +26,25 @@
 
 //Refers the help channel for a command list
         case "help":
-          message.channel.send('If you need help with commands, go to #command-list');
+          message.channel.send('If you need help with commands, go to #command-list ');
         break;
         
 //Pet
         case "pet":
-          if (talkedRecently.has(message.author.id)) {
-            message.channel.send("I like pets and all " + message.author.username + ", but I need a minute.");}
-          else{message.channel.send({files: ["https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/Jeffrey/cuteJeffrey.jpg"]});
-          talkedRecently.add(message.author.id);
-          setTimeout(() => {talkedRecently.delete(message.author.id);}, 60000);}
+          if(message.channel.id === '426836936489959445'){
+            if (talkedRecently.has(message.author.id)) {
+              message.channel.send("I like pets and all " + message.author.username + ", but I need a minute.");}
+            else{message.channel.send("This will later have a reward...",{files: ["https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/Jeffrey/cuteJeffrey.jpg"]});
+            talkedRecently.add(message.author.id);
+            setTimeout(() => {talkedRecently.delete(message.author.id);}, 60000);
+            }
+          }
+          else{
+            var errMessPet = new Discord.RichEmbed()
+              .setColor(0xcc0000)
+              .setDescription("This command can only be used in #jeffreys-area ")
+            message.channel.sendEmbed(errMessPet);
+          }
         break;
 
 //TEST COMMAND
