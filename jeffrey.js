@@ -31,8 +31,7 @@
         
 //Pet
         case "pet":
-          var jeffArea = '426836936489959445';
-          if(message.channel.id === jeffArea){
+          if(message.channel.id === '426836936489959445'){
             if (talkedRecently.has(message.author.id)) {
               message.channel.send("I like pets and all " + message.author.username + ", but I need a minute.");}
             else{message.channel.send("This will later have a reward...",{files: ["https://raw.githubusercontent.com/SheepishShepherd/Jeffrey-Discord-Bot/master/Images/Jeffrey/cuteJeffrey.jpg"]});
@@ -44,7 +43,7 @@
             message.delete(1).catch();
             var errMessPet = new Discord.RichEmbed()
               .setColor(0xcc0000)
-              .setTitle("Error: The command !pet can only be used in " + jeffArea.name)
+              .setTitle("Error: The command !pet can only be used in #jeffreys-area")
             message.channel.sendEmbed(errMessPet).then(msg => {msg.delete(10000)}).catch();
           }
         break;
