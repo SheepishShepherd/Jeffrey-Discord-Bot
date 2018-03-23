@@ -44,7 +44,7 @@
             var errMessPet = new Discord.RichEmbed()
               .setColor(0xcc0000)
               .setTitle("Error: The command !pet can only be used in #jeffreys-area")
-            message.channel.sendEmbed(errMessPet).then(msg => {msg.delete(10000)}).catch();
+            message.channel.sendEmbed(errMessPet).then(msg => {msg.delete(15000)}).catch();
           }
         break;
 
@@ -99,7 +99,7 @@
               .setThumbnail(mentU.displayAvatarURL)
             message.channel.sendEmbed(prof);
           }
-          else{message.channel.send("I don't think that person exists...");}
+          else{message.channel.send("I don't think that person exists...").then(msg => {msg.delete(15000)}).catch();}
         break;
 
 //Flips a coin that lands on either heads or tails
@@ -118,7 +118,7 @@
            else if(args[1]){
              if(args[1] == "6"){message.reply("rolled a " + roll6 + "!");}
              else if(args[1] == "20"){message.reply("rolled a " + roll20 + "!");}
-             else{message.channel.send("I don't have a die with that many sides!");}}
+             else{message.channel.send("I don't have a die with that many sides!").then(msg => {msg.delete(15000)}).catch();}}
            else{return;}
          break;
 
@@ -131,7 +131,7 @@
         
 //If the user tries to run a command that does not exist, the bot will state so
         default:
-          message.channel.send("That's not a command, silly!").then(msg => {msg.delete(10000)}).catch();
+          message.channel.send("That's not a command, silly!").then(msg => {msg.delete(15000)}).catch();
     }
   });
     
