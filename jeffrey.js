@@ -42,7 +42,7 @@
           else{
             var errMessPet = new Discord.RichEmbed()
               .setColor(0xcc0000)
-              .setDescription("This command can only be used in #jeffreys-area ")
+              .setTitle("This command can only be used in #jeffreys-area ")
             message.channel.sendEmbed(errMessPet);
           }
         break;
