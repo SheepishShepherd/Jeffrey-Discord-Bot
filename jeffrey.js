@@ -44,7 +44,7 @@
             message.delete(1).catch();
             var errMessPet = new Discord.RichEmbed()
               .setColor(0xcc0000)
-              .setTitle("Error: The command !pet can only be used in " + jeffArea)
+              .setTitle("Error: The command !pet can only be used in " + jeffArea.name)
             message.channel.sendEmbed(errMessPet).then(msg => {msg.delete(10000)}).catch();
           }
         break;
