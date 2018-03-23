@@ -40,7 +40,7 @@
             }
           }
           else{
-            message.delete(1)).catch();
+            message.delete(1).catch();
             var errMessPet = new Discord.RichEmbed()
               .setColor(0xcc0000)
               .setTitle("This command can only be used in #jeffreys-area ")
