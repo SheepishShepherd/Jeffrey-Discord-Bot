@@ -17,6 +17,7 @@
     if(message.author.equals(bot.user)) return;
     if(message.content === "!") return;
     if(message.content.startsWith("! ")) return;
+    if(message.author.id === "250110325318221824") return;
     
     var args = message.content.substring(prefix.length).split(" ");
     switch (args[0].toLowerCase()) {  
