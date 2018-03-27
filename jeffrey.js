@@ -11,7 +11,7 @@
     member.addRole(sheepRole); 
   });
 
-//If the message does not start with the set prefix, the bot will ignore the message.
+//If the message does not meet the following standards, it will ignore the message entirely
   bot.on('message', message => {
     if(!message.content.startsWith(prefix)) return;
     if(message.author.equals(bot.user)) return;
@@ -19,6 +19,7 @@
     if(message.content.startsWith("! ")) return;
     if(message.author.id === "250110325318221824") return;
     
+//Defines the command and the arguments tagged
     var args = message.content.substring(prefix.length).split(" ");
     switch (args[0].toLowerCase()) {  
 
