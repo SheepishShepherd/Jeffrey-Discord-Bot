@@ -20,6 +20,11 @@
     
     var args = message.content.substring(prefix.length).split(" ");
     switch (args[0].toLowerCase()) {  
+
+//TEST COMMAND
+        case "test":
+          message.channel.send(message.author.id);
+        break;
         
 //Replies "Pong!" if the user uses /ping
         case "ping":
@@ -48,13 +53,6 @@
               .setTitle("Error: The command !pet can only be used in #jeffreys-area")
             message.channel.sendEmbed(errMessPet).then(msg => {msg.delete(15000)}).catch();
           }
-        break;
-
-//TEST COMMAND
-        case "test":
-          var num = 6;
-          var numS = num.toString();
-          message.channel.send(num);
         break;
         
 //Show a user their ID Card in the form of an Embed
